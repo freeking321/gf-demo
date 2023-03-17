@@ -1,0 +1,16 @@
+
+# CLI tool, only in development environment.
+# https://goframe.org/pages/viewpage.action?pageId=3673173
+gfcli:
+  build:
+    name: "gf"
+    arch: "amd64"
+    system: "linux,darwin.windows"
+    mod: "none"
+    packSrc: "resource,manifest"
+    version: "v1.0.0"
+    output: "./bin"
+    extra: ""
+  gen:
+    dao:
+    - link: "mysql:root:12345678@tcp(127.0.0.1:3306)/gf-test"
