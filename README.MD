@@ -1,5 +1,7 @@
 # GoFrame Template For SingleRepo
 
+学习链接 https://goframe.org/pages/viewpage.action?pageId=1114119
+
 Project Makefile Commands: 
 - `make cli`: Install or Update to the latest GoFrame CLI tool.
 - `make dao`: Generate go files for `Entity/DAO/DO` according to the configuration file from `hack` folder.
