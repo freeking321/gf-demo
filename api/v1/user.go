@@ -11,7 +11,7 @@ type UserListReq struct {
 	g.Meta `path:"/user/list" tags:"UserService" method:"get" summary:"获取用户列表的请求request"` // 定义接口路由和请求方式
 	Page int `v:"required|length:1,16"`  // 定义接收参数和验证器
 	Size int `v:"required|length:1,16"`  // 定义接收参数和验证器
-	UserId int `v:"required"`
+	UserId int `json:"user_id" v:"required"`
 }
 
 type UserListRes struct { //定义返回结构

@@ -11,6 +11,7 @@ gfcli:
     version: "v1.0.0"
     output: "./bin"
     extra: ""
+  # 这个是gen命令的数据库配置
   gen:
     dao:
     - link: "mysql:root:12345678@tcp(127.0.0.1:3306)/gf-test"

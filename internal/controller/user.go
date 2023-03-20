@@ -16,7 +16,7 @@ func (c *cUser) UserList(ctx context.Context, req *v1.UserListReq) (res *v1.User
 	getListRes, err := service.User().GetUserList(ctx, model.UserGetListInput{
 		Page : req.Page,
 		Size : req.Size,
-
+		UserId: req.UserId,
 	})
 
 	if err != nil {

@@ -10,10 +10,9 @@ import (
 )
 
 type sUser struct {
-
 }
 
-func init()  {
+func init() {
 	// 注册service层的 register
 	user := New()
 	service.RegisterUser(user)
@@ -22,7 +21,6 @@ func init()  {
 func New() *sUser {
 	return &sUser{}
 }
-
 
 // GetUserList 获取用户列表  logic 里面编写业务逻辑代码
 func (s *sUser) GetUserList(ctx context.Context, in model.UserGetListInput) (out *model.UserGetListOutput, err error) {
@@ -57,7 +55,7 @@ func (s *sUser) GetUserList(ctx context.Context, in model.UserGetListInput) (out
 	out.Total = len(list)
 
 	// 获取content
-	if err := listModel.ScanList(&out.List, "user"); err != nil {
+	if err := listModel.Scan(&out.List); err != nil {
 		return out, err
 	}
 	return
