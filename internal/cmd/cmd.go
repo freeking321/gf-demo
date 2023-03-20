@@ -20,12 +20,13 @@ var (
 			s := g.Server()
 			s.Group("/", func(group *ghttp.RouterGroup) {
 				// 这里可以为路由组 使用多个中间件
-				group.Middleware(
-					ghttp.MiddlewareHandlerResponse)
+				group.Middleware(ghttp.MiddlewareHandlerResponse)
 				group.Bind(
 					controller.Hello,
+					controller.User,
 				)
 			})
+
 			// 单独定义一个路由组
 			s.Group("/user", func(group *ghttp.RouterGroup) {
 

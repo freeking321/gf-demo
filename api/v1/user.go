@@ -8,11 +8,17 @@ import (
 // tag没搞懂啥意思
 
 type UserListReq struct {
-	g.Meta `path:"/user/list" tags:"UserService" method:"get" summary:"获取用户列表的请求request"`
+	g.Meta `path:"/user/list" tags:"UserService" method:"get" summary:"获取用户列表的请求request"` // 定义接口路由和请求方式
+	Page int `v:"required|length:1,16"`  // 定义接收参数和验证器
+	Size int `v:"required|length:1,16"`  // 定义接收参数和验证器
+	UserId int `v:"required"`
 }
 
-type UserListRes struct {
-	g.Meta `mime:"text/html" example:"string"`
+type UserListRes struct { //定义返回结构
+	List interface{} `json:"list"`
+	Page  int `json:"page"`  // 分页码
+	Size  int `json:"size"`  // 分页数量
+	Total int `json:"total"` // 数据总数
 }
 
 

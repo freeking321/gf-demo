@@ -14,4 +14,5 @@ type User struct {
 	Id       interface{} //
 	Account  interface{} //
 	Password interface{} //
+	Name     interface{} //
 }
