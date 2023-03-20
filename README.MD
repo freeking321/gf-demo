@@ -1,5 +1,6 @@
 # GoFrame Template For SingleRepo
 
+gf 练手项目
 学习链接 https://goframe.org/pages/viewpage.action?pageId=1114119
 
 Project Makefile Commands: 
