@@ -5,5 +5,6 @@
 package logic
 
 import (
+	_ "demo/internal/logic/middleware"
 	_ "demo/internal/logic/user"
 )
